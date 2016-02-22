@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class VentanaPrincipal : Form
     {
-        private sumatra comandox;
+        sumatra comandox = new sumatra();
         private string aimprimir;
-        private string[] archivete;
-        public Form1()
+        public VentanaPrincipal()
         {
             InitializeComponent();
 
@@ -31,17 +30,11 @@ namespace WindowsFormsApplication1
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             DialogResult result = fbd.ShowDialog();
             string[] files = System.IO.Directory.GetFiles(fbd.SelectedPath, "*.pdf");
-            archivete = files;
-            System.Windows.Forms.MessageBox.Show("Hay " + files.Length.ToString() + " archivos PDF", "Message");
-            
+            comandox.archivosAImprimir = files;
+            System.Windows.Forms.MessageBox.Show("Hay " + files.Length.ToString() + " archivos PDF", "Message");            
         }
 
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -53,12 +46,12 @@ namespace WindowsFormsApplication1
 
         private void Asignar(object sender, EventArgs e)
         {
-            comandox = new sumatra(textBox1.Text);
+            comandox.setTotal(hojas.Text);
             aimprimir = comandox.generarComando();
-            if (textBox1.Text != null)
+            if (hojas.Text != null)
             {
-                MessageBox.Show("Se va a imprimir la/las página/s " + textBox1.Text);
-                button3.Enabled = true;
+                MessageBox.Show("Se va a imprimir la/las página/s " + hojas.Text);
+                start.Enabled = true;
             }
             else
             {
@@ -70,14 +63,15 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                foreach (string archivo in archivete)
+                foreach (string archivo in comandox.archivosAImprimir)
                 {
                     Process ejecucion = new Process();
                     ejecucion.StartInfo.UseShellExecute = false;
-                    ejecucion.StartInfo.FileName = comandox.getUbicacion();
+                    ejecucion.StartInfo.FileName = @"""" + comandox.getEjecutable() + @"""";
                     ejecucion.StartInfo.CreateNoWindow = true;
-                    ejecucion.StartInfo.Arguments = aimprimir + " " + archivo;
+                    ejecucion.StartInfo.Arguments = aimprimir + archivo;
                     ejecucion.Start();
+                    MessageBox.Show(@"""" + comandox.getEjecutable() + @"""" + aimprimir + archivo);
                 }
             }
             catch (Exception e)
@@ -87,10 +81,23 @@ namespace WindowsFormsApplication1
             }
         }
 
+        //VENTANA DE INFO
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Info InfoAbrir = new Info();
             InfoAbrir.ShowDialog();
+        }
+
+        //VENTANA SETUP EN DESUSO
+        private void setup(object sender, EventArgs e)
+        {
+            config ConfigAbrir = new config();
+            ConfigAbrir.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            comandox.setEjecutable();
         }
     }
 }

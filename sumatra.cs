@@ -2,26 +2,58 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
     class sumatra
     {
-        public const string ubicacion = @"""C:\Program Files\SumatraPDF\SumatraPDF.exe""";
+        private string ejecutable;
+        public string[] archivosAImprimir;
         public const string comando = " -print-to-default -print-settings ";
-        public string total { get; set; }
-        public sumatra(string cantidad)
+        public string total;
+        public void setTotal(string cantidad)
         {
-            this.total = cantidad;
+            total = cantidad;
         }
-        public string getUbicacion()
+
+        public void setUbicacion(string[] archivo)
         {
-            return ubicacion;
+
         }
 
         public string generarComando()
         {
-            return comando + this.total;
+            return comando + total + " ";
         }
+
+        public void setEjecutable()
+        {
+            ejecutable = abrir();
+        }
+
+        public string getEjecutable()
+        {
+            return ejecutable;
+        }
+
+        public string abrir()
+        {
+            try
+            {
+                FolderBrowserDialog fbd = new FolderBrowserDialog();
+                DialogResult result = fbd.ShowDialog();
+                string[] files = System.IO.Directory.GetFiles(fbd.SelectedPath, "sumatrapdf.exe");
+                return files[0];
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Console.WriteLine(e.Message);
+                return null;
+            }
+
+        }
+
     }
 }

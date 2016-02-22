@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label8.Text" xml:space="preserve">
-    <value>0) Instale
-1) Elija la carpeta donde instaló o se encuentra sumatrapdf.exe
-2) Abra la carpeta donde se encuentran sus PDFs
-3) Escriba el número de páginas a imprimir con el siguiente formato:
-A) EVEN (pares)
-B) ODD (impares)
-C) 1 (un número solo = una página)
-D) 1 - 5 (segmento se parado por guión medio = rango de páginas)
-E) 4, 5, 6 (números separados por coma = páginas específicas)
-F) "compact", "fit", "duplex", pueden ser añadidos como parámetros,
-    separados por como y sin las comillas.
-4) Click en Asignar para establecer las páginas a imprimir
-5) Rock And Roll! para comenzar el proceso de impresión.</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>    IMP. Encolador de comandos para SUMATRA PDF
-    Copyright (C) 2016  Maximiliano De Pietro
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-
-     MAIL: maximiliano.depietro@gmail.com</value>
-  </data>
 </root>

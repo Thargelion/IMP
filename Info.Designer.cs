@@ -37,12 +37,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.sumatraPDF = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
+            this.sumatraPDF = new System.Windows.Forms.LinkLabel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -119,44 +119,14 @@
             this.tabPage1.Text = "INSTRUCCIONES";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // label10
             // 
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(407, 242);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "LICENCIA";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(91, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "INSTRUCCIONES:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(333, 156);
-            this.label8.TabIndex = 10;
-            this.label8.Text = resources.GetString("label8.Text");
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(387, 221);
-            this.label9.TabIndex = 0;
-            this.label9.Text = resources.GetString("label9.Text");
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(156, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "en la ubicación por defecto.";
             // 
             // sumatraPDF
             // 
@@ -169,14 +139,44 @@
             this.sumatraPDF.Text = "SUMATRA PDF";
             this.sumatraPDF.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sumatraPDF_LinkClicked);
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(140, 37);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "en la ubicación por defecto.";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(333, 169);
+            this.label8.TabIndex = 10;
+            this.label8.Text = resources.GetString("label8.Text");
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(91, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "INSTRUCCIONES:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(407, 242);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "LICENCIA";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(387, 221);
+            this.label9.TabIndex = 0;
+            this.label9.Text = resources.GetString("label9.Text");
             // 
             // Info
             // 
