@@ -1,6 +1,6 @@
 # IMP
 
-SUMATRA PDF's unofficial auto-printer.
+## SUMATRA PDF's unofficial auto-printer.
 
 This program is a simple C# Form that prints every PDF inside an user choosed folder. It allows add some parameters like page quantity.
 
@@ -10,7 +10,7 @@ This is my first C# project and my first 'serius' OOP so it's posible to have so
 
 Enjoy!
 
-Automatizador de impresiones PDF utilizando SUMATRA
+## Automatizador de impresiones PDF utilizando SUMATRA
 
 El programa es un simple Form que imprime todos los PDF de una carpeta elegida por el usuario. Permite incorporar ciertos parámetros como cantidad de hojas o forma de impresión.
 
